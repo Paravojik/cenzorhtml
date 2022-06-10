@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrap{
+            width: 100%;
+            height: 100vh;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            background-color: blue;
+            padding: 30px;
+        }
+        .pole{
+            width: 500px;
+            height: 30vh;
+            background-color: white;
+            border-radius: 15px;
+            padding: 15px;
+        }
+        .row{
+            width: 200px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        button{
+           border-radius: 10px;
+           padding: 4px 10px;
+           border: 0px solid black;
+           cursor: pointer;
+        }
+        .redag{
+            margin-top: 30px;
+            width: 500px;
+            height: 45vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: red;
+            border: 3px solid white ;
+            border-radius: 15px;
+            justify-content: space-between;
+        }
+        .textare{
+            width: 400px;
+            height: 30vh;
+            padding: 10px;
+            resize: none;
+        }
+        .red-but{
+            background-color: blue;
+            color: white;
+            width: 75px;
+        }
+        .stul{
+            width: 500px;
+            height: 45vh;
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            justify-content: space-between;
+            background-color: red;
+            border: 3px solid white ;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        .st1{
+            width: 100%;
+            height: 20px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .st2{
+            width: 30%;
+            height: 20px;
+            display: flex;
+           justify-content: space-between;
+
+        }
+        .shruftu{
+            background-color: greenyellow;
+            width: 80px;
+            height: 30px;
+            display: flex;
+
+        }
+        
+        .save2{
+           background-color: blue;
+           color: white;
+           width: 50px;
+        }
+        .clor{
+            width: 60%;
+            height: 50%;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .leftcl{
+            width: 100%;
+            height: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .col{
+            width: 80px;
+            font-size: 10px;
+            height: 30px;
+            background-color: blue;
+            color: white;
+        }
+        .rightcl{
+            width: 100px;
+            height: 100px;
+        display: flex;
+        flex-direction: column;
+        }
+        .rowpal{
+            width: 100%;
+            height: 33.4%;
+            display: flex;
+        }
+        .col1{
+            background-color: red;
+            width: 33.4%;
+            height: 100%;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+        .col2{
+            background-color: green;
+        }
+        .col3{
+            background-color:  blue;
+        }
+        .col4{
+            background-color: white;
+        }
+        .col5{
+            background-color: orange;
+        }
+        .col6{
+            background-color: palevioletred;
+        }
+        .col7{
+            background-color: black;
+        }
+        .col8{
+            background-color: gray;
+        }
+        .col9{
+            background-color: pink;
+        }
+        .leftctul{
+            width: 60%;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+        }
+        .bold-italic{
+            width: 100%;
+            height: 30px;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            
+        }
+        .italic{
+            width: 40%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+               align-items: center;
+        }
+        .ittic{
+            width: 15px;
+            height: 15px;
+            border: 1px solid black;
+            background-color: white;
+        }
+        .bold{
+            width: 15px;
+            height: 15px;
+            border: 1px solid black;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+  <div class="pole" id="pole"></div>
+  <div class="row">
+      <button class="htm" id="htm">Redaguvatu</button>
+      <button class="styl" id="styl">Ctulizyvstu</button>
+  </div>
+  <div class="redag">
+<textarea class="textare" id="textare">
+
+</textarea>
+<div class="row1">
+    <button class="red-but save"  id="save">save</button>
+    <button  class="red-but">Dodatu</button>
+    <button  class="red-but">Ochustutu</button>
+</div>
+  </div>
+  <div class="stul">
+      <div class="st1">
+          <div class="rozm">Rozmir texty</div>
+          <label for=""><input type="radio" class="radioi" name="radio" value="12px">12px</label>
+          <label for=""><input type="radio"class="radioi" name="radio" value="14px">14px</label>
+          <label for=""><input type="radio" name="radio"class="radioi" value="16px" checked>16px</label>
+          <label for=""><input type="radio" name="radio" value="18px" class="radioi">18px</label>
+          <label for=""><input type="radio" name="radio" value="20px" class="radioi">20px</label>
+         
+          <!-- <div class="px">12px</div>
+          <div class="px">12px</div>
+          <div class="px">12px</div>
+          <div class="px">12px</div>
+          <div class="px">12px</div> -->
+      </div>
+      <div class="st2">
+          Shruftu
+          <select name="select" id="select">
+              <option value="Times" class="shruft" >Times</option>
+              <option value="Tahoma" class="shruft">Tahoma</option>
+              <option value="consolas" class="shruft">consolas</option>
+              <option value="Monserat" class="shruft">Monserat</option>
+              <option value="Times" class="shruft">Times</option>
+          </select>
+      </div>
+      <div class="clor">
+          <div class="leftctul">
+          <div class="leftcl">
+          <button class="col colch1">Color text</button>
+          <button class="col colch2">Color background</button></div>
+          <div class="bold-italic">
+            <div class="italic">Italic <div class="ittic"></div></div>
+            <div class="italic">Bold <div class="bold"></div></div>
+          </div>
+        </div>
+          <div class="rightcl rightcl1">
+              <div class="rowpal">
+                  <div class="col1" id="col11"></div>
+                  <div class="col1 col2"  id="col12"></div>
+                  <div class="col1 col3"  id="col13"></div>
+              </div>
+              <div class="rowpal">
+                <div class="col1 col4"  id="col14"></div>
+                <div class="col1 col5"  id="col15"></div>
+                <div class="col1 col6"  id="col16"></div>
+            </div>
+            <div class="rowpal">
+                <div class="col1 col7"  id="col17"></div>
+                <div class="col1 col8"  id="col18"></div>
+                <div class="col1 col9"  id="col19"></div>
+            </div>
+        </div>
+        <div class="rightcl rightcl2">
+            <div class="rowpal">
+                <div class="col1" id="col21"></div>
+                <div class="col1 col2"  id="col22"></div>
+                <div class="col1 col3"  id="col23"></div>
+            </div>
+            <div class="rowpal">
+              <div class="col1 col4"  id="col24"></div>
+              <div class="col1 col5"  id="col25"></div>
+              <div class="col1 col6"  id="col26"></div>
+          </div>
+          <div class="rowpal">
+              <div class="col1 col7"  id="col27"></div>
+              <div class="col1 col8"  id="col28"></div>
+              <div class="col1 col9"  id="col29"></div>
+          </div>
+      </div>
+      </div>
+      <button class="close">close</button>
+  </div>
+    </div>
+    <script>
+        // save.onclick = function(){
+        //     let ss = textare.value
+        //     console.log(ss)
+        //   pole.innerText = ss
+        // }
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
